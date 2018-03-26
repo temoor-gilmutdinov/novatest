@@ -1,0 +1,35 @@
+<h2>{{ headline }}</h2>
+{% if picture is not empty %}
+    {{ picture }}
+{% endif %}
+<div class="rating stars-{{ rating }}">&nbsp;</div>
+<div class="type-name">{{ type_name }}</div>
+<div class="type">{{ type }}</div>
+<div class="country">{{ country }}</div>
+{% if price_list is not empty %}
+    <div class="price-list">
+        {{ price_list }}
+    </div>
+{% endif %}
+<div class="bedrooms">
+    <span class="label">{{ 'Bedrooms'|trans }}:</span><span class="item">{{ bedrooms }}</span>
+</div>
+<div class="beds">
+    <span class="label">{{ 'Beds'|trans }}:</span><span class="item">{{ beds }}</span>
+</div>
+<div class="bathrooms">
+    <span class="label">{{ 'Bathrooms'|trans }}:</span><span class="item">{{ baths }}</span>
+</div>
+<div class="guests">
+    <h3>{{ 'Guests'|trans }}</h3>
+    <div class="children">
+        <span class="label">{{ 'Children'|trans }}:</span><span class="item">{{ children }}</span>
+    </div>
+    <div class="adults">
+        <span class="label">{{ 'Adults'|trans }}:</span><span class="item">{{ adults }}</span>
+    </div>
+    <div class="pets">
+        <span class="pets">{{ 'Suitable for pets'|trans }}:</span><span class="item">{{ pets }}</span>
+    </div>
+</div>
+

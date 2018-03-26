@@ -1,0 +1,14 @@
+parameters:
+  novatest.rest.rental_endpoint: 'https://raw.githubusercontent.com/adaptdk/backend-novasol-challenge/master/response.json'
+
+services:
+  novatest.normalizer.rental.json:
+    class: Drupal\novatest\Normalizer\RentalNormalizer
+    arguments: []
+    tags:
+      - { name: normalizer }
+  novatest.rental_fetcher:
+    class: Drupal\novatest\Http\RentalFetcher
+    arguments: ['@http_client', '@serializer']
+    calls:
+      - ['setEndpointUrl', ['%novatest.rest.rental_endpoint%']]

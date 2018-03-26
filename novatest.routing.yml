@@ -1,0 +1,6 @@
+novatest.pages.rental_list:
+  path: '/rental-list'
+  defaults:
+    _controller: '\Drupal\novatest\Controller\RentalController::listPage'
+  requirements:
+    _access: 'TRUE'
